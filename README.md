@@ -1,3 +1,3 @@
-ПРОГРАММИРОВАНИЕ НА PYTHON.
+PROGRAMMING IN PYTHON.
 
-Здесь разбитые на темы будут представлены небольшие части кода, которые показывают, как развиваются новые или уже имеющиеся у меня навыки программирования.
+Here, broken down into topics, small pieces of code will be presented that show how new or already existing programming skills are developing.
