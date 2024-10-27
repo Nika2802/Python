@@ -1,0 +1,104 @@
+#1
+v1 = 4
+v2 = 3
+v3 = 2
+v4 = 5
+v5 = 1
+szo = (v1+v2+v3+v4+v5)/5
+print(szo)
+
+#2
+A = 50
+B = 30
+C = 0.1 #метров
+P = (A+B)*2
+a = P/C
+print(a)
+
+#3
+B = 150 #руб. за м^2
+X = 15
+A = 0.8 #метров
+S = X*A
+a = S*B
+print(a)
+
+#4
+A = 16
+B = 3
+a1 = 12
+b1 = 1 #метр
+K = 2000 #руб.
+S = A*B
+S1 = a1*b1
+N = (S/S1)*K
+print(N)
+
+#5
+A = 80 #руб. за кг
+B = 70
+C = 75
+X = 15 #кг
+Y = 7
+Z = 10
+x = 9 #кг
+y = 5
+z = 6
+P = (X*A)+(Y*B)+(Z*C)
+V = (x*A)+(y*B)+(z*C)
+PV = P+V
+print(P,V,PV)
+
+#6
+s = 18 #штук
+K = (s/6)*4
+PC= (s-K)/2
+print(K,PC)
+
+#7
+a = 6
+b = 3
+c = 8
+SA = (a+b+c)/3
+SG = (a * b * c)**0.333333333333333
+print(SA,SG)
+
+#8
+a = b = 12 #тетради и обложки
+t = 100
+o = 50
+sum = (t*a)+(o*a)
+print(sum)
+
+#9
+import math
+a = [6,3,8]
+temp = 1
+for i in range(0, len(a)):
+    temp = temp * a[i]
+temp2 = (float)(math.pow(temp,(1/len(a))))
+res = (float)(temp2)
+print("The geometric mean of a is:"+str(res))
+
+a=3
+b=a<<4
+print(b)
+
+a = 6
+S = a*2*6
+print(S)
+
+#10
+a = True
+b = False
+print(not a, not b)
+
+#11
+a = True
+b = False
+print(a or b)
+
+#12
+a = True
+b = False
+print(a and b)
