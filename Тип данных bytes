@@ -1,0 +1,38 @@
+#1
+s = 'Python is big'
+b = s.encode('ASCII')
+a = s.encode('UTF-16')
+print(type(s))
+print(b)
+print(a)
+print(type(b))
+r = str(s)
+print(r)
+print(len(r))
+
+#2
+a = 9
+print(bytes(a))
+a = bytes([9])
+print(a)
+
+#3
+a = bytes([1, 15, 8, 20, 6])
+print(a)
+
+#1.1
+s = 'My name is Doctor Steven Strange'
+a = s.encode('ASCII')
+print(a)
+
+#2.1
+s = 'My name is Doctor Steven Strange'
+a = s.encode('ASCII')
+b = a.decode('ASCII')
+print(b)
+print(type(a))
+print(type(b))
+
+#3.1
+a = bytes([20, 25, 17, 7, 18])
+print(a)
