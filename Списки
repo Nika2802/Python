@@ -1,0 +1,22 @@
+#1
+a = [10, 5, 7, 11]
+print(sum(i**2 for i in a))
+
+#2
+a = [10, 5, 7, 11]
+b = [x for x in a if x%2!=0]
+print(b)
+
+#3
+a = [1, 2, 3]
+b = [2, 4, 9]
+c = set(a).difference(set(b))
+d = set(b).difference(set(a))
+e = list(c.union(d))
+print(e)
+
+#4
+a = [1,3,8,9,6,9]
+b = ['cat', 'snow']
+c = a + b
+print(c)
