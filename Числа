@@ -1,0 +1,26 @@
+#1
+from cmath import polar
+x = sum(map(complex, input().split('+')))
+print(*polar(x), sep="\n")
+
+#2
+a = int(input("Введите число - "))
+print(bin(a))
+
+# 3
+a = "FDB38E"
+b = int(a, 16)
+print("Из 16 в 10:" + str(b))
+
+#4
+(98, 175, 4) == '62AF30'
+a = '62AF30'
+b = int(a, 16)
+print("Из 16 в 10:" + str(b))
+print('Из 10 в 16:',hex(6467376))
+
+#5
+a = 84.5 + 9.9j
+print('Действительная часть числа', a.real)
+print('Мнимая часть числа', a.imag)
+print('Сопряженное к 84.5+9.9j:', a.conjugate())
