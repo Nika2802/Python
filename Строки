@@ -1,0 +1,49 @@
+#1
+a = 'На Дерибасовской хорошая погода или на Брайтон-Бич опять идут дожди'
+b = len(a.split())
+print(b)
+
+#2
+s = "наш дом"
+s1 = (s[round(len(s)-(len(s)//2)):])
+s2 = (s[:(round(len(s)-(len(s)//2)))])
+print(s1, s2)
+
+#3
+import re
+s = "112, 45, 346, 1, 10"
+a = re.sub('[1]', 'one', s)
+print(a)
+
+#1.1
+a = '45 5 8345'
+for i in range(1, len(a)):
+    if a[i] == a[0]:
+        print(i)
+
+#2.1
+a = 'snow'
+if 'x' not in a:
+    print('x не найден')
+if 'w' not in a:
+    print('w не найден')
+for i in a:
+    if i in 'xw':
+        print(i,'встречается раньше')
+        break
+
+#3.1
+a = 'cat'
+if len(a)>=10:
+    print(a[0:6])
+else:
+    print(a+'o'*(12 - len(a)))
+
+#4
+import re
+a = 'php'
+if a == 'abc':
+    b = re.sub('abc', 'www', a)
+    print(b)
+else:
+    print(a+'zzz')
