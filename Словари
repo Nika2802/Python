@@ -1,0 +1,32 @@
+#1
+a = {}
+for i in input().split():
+    a[i] = a.get(i, 0) + 1
+    print(a[i] - 1, end=" ")
+
+#2
+a = {}
+for i in range(int(input())):
+    b = input().split()
+    for c in b:
+        a[c] = a.get(c, 0) + 1
+maxa = max(a.values())
+mostch = [k for k, v in a.items() if v == maxa]
+print(min(mostch))
+
+#3
+a = {'w':50, 'x':100, 'y':'Green', 'z':400}
+b = {'x':300, 'y':'Red', 'z':600}
+c = a.copy()
+for k, v in b.items():
+    c[k] = c.get(k, 0), v
+print(c)
+
+#4
+from collections import defaultdict
+a = [1, 1, 2]
+b = ['a', 'a', 'b']
+d = defaultdict(list)
+for key, value in zip(a, b):
+    d[key].append(value)
+print(dict(d))
