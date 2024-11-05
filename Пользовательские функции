@@ -1,0 +1,36 @@
+#1
+def sum_range(start, end):
+    if start > end:
+        start, end = end, start
+    s = 0
+    for i in range(start, end+1):
+        s += i
+    return s
+a, b = map(int, input().split())
+print(sum_range(a, b))
+    
+#2
+a = int(input())
+b = int(input())
+def NOD(a, b):
+    while a != b:
+        if a > b:
+            a = a - b
+        else:
+            b = b - a
+    print(a)
+    return(a)
+c = NOD( a, b)
+def NOK(a, b):
+    a = a * b // c
+    print(a)
+NOK(a, b)
+
+#3
+import math
+a = int(input())
+b = int(input())
+if math.gcd(a, b) > 1:
+    print('Не взаимно простые')
+else:
+    print('Взаимно простые')
