@@ -1,0 +1,69 @@
+# 1
+import tkinter
+
+a = tkinter.Tk()
+canvas = tkinter.Canvas(a, bg='white', height=600, width=600)
+
+
+ox = 300
+oy = 300
+mx = 30
+my = 30
+z = 3
+b = 14
+canvas.create_line((0, oy), (600, oy), fill='black')
+canvas.create_line((ox, 0), (ox, 600), fill='black')
+for i in range(1, 6):
+    canvas.create_line((ox + round(i * mx), oy - z), (ox + round(i * mx), oy + z), fill='darkblue')
+    canvas.create_line((ox - round(i * mx), oy - z), (ox - round(i * mx), oy + z), fill='darkblue')
+    canvas.create_text(ox - round(i * mx), oy + b, text=str(i * -mx))
+    canvas.create_text(ox + round(i * mx), oy + b, text=str(i * mx))
+    canvas.create_line((ox + z, oy - round(i * my)), (ox - z, oy - round(i * my)), fill='black')
+    canvas.create_line((ox + z, oy + round(i * my)), (ox - z, oy + round(i * my)), fill='black')
+    canvas.create_text(ox + b, oy - round(i * my), text=str(i * -my))
+    canvas.create_text(ox + b, oy + round(i * my), text=str(i * my))
+canvas.pack()
+a.mainloop()
+
+#2
+import tkinter
+import math
+
+def f(x):
+    return 10 * math.sin(x/10)
+
+b = tkinter.Tk()
+canvas = tkinter.Canvas(b, bg='white', height=400, width=400)
+
+ox = 200
+oy = 200
+xn = -100
+xk = 100
+ox1 = 200
+oy1 = 200
+mx1 = 30
+my1 = 30
+z = 3
+o = 14
+mx = (400 - ox - 30)/xk
+my = (oy - 40)/10
+c = []
+canvas.create_line((0, oy), (400, oy), fill='black')
+canvas.create_line((ox, 0), (ox, 400), fill='black')
+for i in range(1, 8):
+    canvas.create_line((ox1 + round(i * mx1), oy1 - z), (ox1 + round(i * mx1), oy1 + z), fill='red')
+    canvas.create_line((ox1 - round(i * mx1), oy1 - z), (ox1 - round(i * mx1), oy1 + z), fill='red')
+    canvas.create_text(ox1 - round(i * mx1), oy1 + o, text=str(i * -mx1))
+    canvas.create_text(ox1 + round(i * mx1), oy1 + o, text=str(i * mx1))
+    canvas.create_line((ox1 + z, oy1 - round(i * my1)), (ox1 - z, oy1 - round(i * my1)), fill='orange')
+    canvas.create_line((ox1 + z, oy1 + round(i * my1)), (ox1 - z, oy1 + round(i * my1)), fill='orange')
+    canvas.create_text(ox1 + o, oy1 - round(i * my1), text=str(i * -my1))
+    canvas.create_text(ox1 + o, oy1 + round(i * my1), text=str(i * my1))
+x = xn
+dx = 0.001
+while x <= xk:
+    x = x + dx
+    c.append((ox + round(x*mx), oy - round(f(x)*my)))
+canvas.create_line(c, fill='blue')
+canvas.pack()
+b.mainloop()
