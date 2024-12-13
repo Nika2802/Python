@@ -16,3 +16,4 @@ a = datetime.datetime(2024,10,5)
 b = datetime.datetime(2023,2,28)
 c = a - b
 print(c.days)
+
