@@ -67,3 +67,4 @@ while x <= xk:
 canvas.create_line(c, fill='blue')
 canvas.pack()
 b.mainloop()
+
