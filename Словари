@@ -30,3 +30,4 @@ d = defaultdict(list)
 for key, value in zip(a, b):
     d[key].append(value)
 print(dict(d))
+
