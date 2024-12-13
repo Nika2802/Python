@@ -36,3 +36,4 @@ print(type(b))
 #3.1
 a = bytes([20, 25, 17, 7, 18])
 print(a)
+
