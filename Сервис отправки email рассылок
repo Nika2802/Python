@@ -35,7 +35,6 @@ def send_email_campaign(campaign_id):
     subscribers = campaign.subscribers.all()
     
     for subscriber in subscribers:
-        # Замените переменные в шаблоне
         html_content = campaign.html_content.format(
             first_name=subscriber.first_name,
             last_name=subscriber.last_name,
@@ -92,7 +91,6 @@ $(document).ready(function() {
     });
 });
 
-# urls.py
 from django.conf.urls import url
 from .views import create_campaign
 
@@ -100,7 +98,6 @@ urlpatterns = [
     url(r'^create_campaign/$', create_campaign, name='create_campaign'),
 ]
 
-# views.py
 from django.http import JsonResponse
 from .models import EmailCampaign
 from .tasks import send_email_campaign
@@ -114,11 +111,7 @@ def create_campaign(request):
         html_content = data['html_content']
         send_time = data.get('send_time')
         
-        campaign = EmailCampaign.objects.create(subject=subject, html_content=html_content)
-        
-        # Можно добавить подписчиков к рассылке
-        # subscribers = Subscriber.objects.all()
-        # campaign.subscribers.add(*subscribers)
+        campaign = EmailCampaign.objects.create(subject=subject, html_content=html_content
         
         if send_time:
             campaign.send_time = timezone.datetime.strptime(send_time, "%Y-%m-%dT%H:%M")
